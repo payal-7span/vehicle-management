@@ -1,0 +1,192 @@
+@VM.API_HostAddress = https://localhost:44351
+@Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxIiwianRpIjoiNzE1MDJhZmItYTRkNS00NTllLThmYTctYjcwNjNmMWQwMGFhIiwibmJmIjoxNzA5NTI5ODgzLCJleHAiOjE3MDk1MzM0ODMsImlhdCI6MTcwOTUyOTg4MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDIwMCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzUxIn0.nJCcWUfM7bINKJ4LBk96H_YJJ1X4KbH6dky4KuxzgRw
+
+############# Auth #############
+POST {{VM.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "email": "payal@7span.com",
+  "password": "Payal123*"
+}
+
+###
+
+POST {{VM.API_HostAddress}}/api/auth/set-password
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "email": "string",
+  "newPassword": "string"
+}
+
+############# End Auth #############
+
+############# FeesHeads #############
+GET {{VM.API_HostAddress}}/api/feesheads
+Authorization: Bearer {{Token}}
+###
+
+POST {{VM.API_HostAddress}}/api/feesheads
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "name": "string"
+}
+
+###
+
+DELETE {{VM.API_HostAddress}}/api/feesheads/{id}
+Authorization: Bearer {{Token}}
+
+###
+
+GET {{VM.API_HostAddress}}/api/feesheads/3
+Authorization: Bearer {{Token}}
+
+###
+
+PUT {{VM.API_HostAddress}}/api/feesheads/{id}
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "name": "string"
+}
+
+###
+############# End FeesHeads #############
+
+############# FeesStructures #############
+GET {{VM.API_HostAddress}}/api/feesstructures
+Authorization: Bearer {{Token}}
+
+###
+
+POST {{VM.API_HostAddress}}/api/feesstructures
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "typeId": 0,
+  "feesHeadId": 0,
+  "isFixOrPercentage": 0,
+  "value": 0,
+  "minValue": 0,
+  "maxValue": 0
+}
+
+###
+
+DELETE {{VM.API_HostAddress}}/api/feesstructures/{id}
+Authorization: Bearer {{Token}}
+
+###
+
+GET {{VM.API_HostAddress}}/api/feesstructures/{id}
+Authorization: Bearer {{Token}}
+
+###
+
+PUT {{VM.API_HostAddress}}/api/feesstructures/{id}
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "typeId": 0,
+  "feesHeadId": 0,
+  "isFixOrPercentage": 0,
+  "value": 0,
+  "minValue": 0,
+  "maxValue": 0
+}
+
+###
+
+GET {{VM.API_HostAddress}}/api/feesstructures/by-type-id/1
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+###
+############# End FeesStructures #############
+
+
+############# VehicleType #############
+
+GET {{VM.API_HostAddress}}/api/vehicletype
+Authorization: Bearer {{Token}}
+
+###
+
+POST {{VM.API_HostAddress}}/api/vehicletype
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "name": "string"
+}
+
+###
+
+DELETE {{VM.API_HostAddress}}/api/vehicletype/{id}
+Authorization: Bearer {{Token}}
+
+###
+
+GET {{VM.API_HostAddress}}/api/vehicletype/{id}
+Authorization: Bearer {{Token}}
+
+###
+
+PUT {{VM.API_HostAddress}}/api/vehicletype/{id}
+Content-Type: application/json
+Authorization: Bearer {{Token}}
+
+{
+  "name": "string"
+}
+
+###
+############# End VehicleType #############
+
+############# Users #############
+GET {{VM.API_HostAddress}}/api/users
+
+###
+
+POST {{VM.API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  //CreateUserCommand
+}
+
+###
+
+DELETE {{VM.API_HostAddress}}/api/users/{id}
+
+###
+
+GET {{VM.API_HostAddress}}/api/users/{id}
+
+###
+
+PUT {{VM.API_HostAddress}}/api/users/{id}
+Content-Type: application/json
+
+{
+  //ModifyUserCommand
+}
+
+###
+
+POST {{VM.API_HostAddress}}/api/users/SetPassword
+Content-Type: application/json
+
+{
+  //SetPasswordCommand
+}
+
+############# End Users #############

@@ -1,0 +1,42 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+
+<div class="authincation h-100">
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <h4 class="text-center mb-4">Sign in your account</h4>                                
+                                    <EditForm Model="LogindData" OnValidSubmit="LoginHandler">
+
+                                    <DataAnnotationsValidator />
+                                    @* <ValidationSummary /> *@
+
+                                    <div class="form-group">
+                                        <label><strong>Email</strong></label>
+                                        <InputText Id="email" Class="form-control" @bind-Value="LogindData.Email" />
+                                        <ValidationMessage For="@(() => LogindData.Email)" />
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label><strong>Password</strong></label>
+                                        <InputText Id="password" type="password" Class="form-control" @bind-Value="LogindData.Password" />
+                                        <ValidationMessage For="@(() => LogindData.Password)" />
+                                    </div>
+                                   
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign me in</button>
+                                    </div>
+                                    </EditForm>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿<!--**********************************
+    Sidebar start
+***********************************-->
+<div class="quixnav">
+    <div class="quixnav-scroll" onclick="document.querySelector('.navbar-toggler').click()">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="true">
+                    <i class="icon icon-form"></i><span class="nav-text">Admin</span>
+                </a>
+                <ul aria-expanded="true" class="mm-collapse mm-show">
+                    <li>
+                        <NavLink class="nav-link" href="vehicletypes">
+                            Vehicle Types
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink class="nav-link" href="feesheads">
+                            Fees Heads
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink class="nav-link" href="feesstructure">
+                            Fees Structure
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink class="nav-link" href="users">
+                            Users
+                        </NavLink>
+                    </li>
+                </ul>
+            </li>
+            <li><a class="nav-link" href="/">
+                    <i class="icon icon-app-store"></i><span class="nav-text">Calculator</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!--**********************************
+    Sidebar end
+***********************************-->
+@code {
+
+}
